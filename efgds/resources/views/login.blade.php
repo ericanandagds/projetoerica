@@ -11,7 +11,9 @@
             <a class="navbar-brand" href="pizzas.html">Cardápio</a>
             <a class="navbar-brand" href="contato.html">Contato</a>
 </nav>
-<form class="login" method="POST" onsubmit="return validaForm(validacaoEmail);">
+
+<form action="{{url('logar')}}" method="POST" onsubmit="return validaForm(validacaoEmail);">
+  @csrf
         <div class="form-group" name="f1">
           <label for="exampleInputEmail1">Email </label>
           <input type="email" name="email" onblur="validacaoEmail(f1.email)" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
@@ -19,7 +21,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Senha</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          <input name="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
         </div>
          <button  type="submit" class="btn btn-primary">Enviar</button>
 
