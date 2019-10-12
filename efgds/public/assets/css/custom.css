@@ -16,7 +16,7 @@ form{
     padding-top: 10px;
   }
   body{
-      background-image: url(assets/img/pizza-background.jpg);
+      background-image: url({{assets/img/pizza-background.jpg}});
   }
   /*.col-sm1{
     float: left;

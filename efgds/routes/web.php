@@ -15,3 +15,6 @@ Route::get('/', 'LoginController@login');
 Route::get('/login', 'LoginController@login');
 Route::post('/logar', 'LoginController@logar');
 Route::get('/logout', 'LoginController@logout');
+Route::get('/cadastro', 'LoginController@cadastro');
+
+Route::view('cadastro', 'cadastro');

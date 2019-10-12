@@ -12,6 +12,7 @@
     <style type="text/css">
       body {
         background-image: url('{{asset('assets/img/pizza-background.jpg')}}');
+             
       }
   
     </style>
