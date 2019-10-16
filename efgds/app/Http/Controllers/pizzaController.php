@@ -21,6 +21,6 @@ class pizzaController extends Controller
             'pagamento'=> 'required'
         ]);
 
-        return redirect()->route('livros.listar')->with('acao', 'Cadastrado com sucesso');
+       
     } 
 }
