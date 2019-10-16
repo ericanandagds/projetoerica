@@ -16,7 +16,11 @@ Route::get('/login', 'LoginController@login');
 Route::post('/logar', 'LoginController@logar');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/cadastro', 'LoginController@cadastro');
-$router->when(SE, 'admin', ['post'])
-Route::get('/pizza', '@pizzaController@home');
+
 Route::view('cadastro', 'cadastro');
-Route::view('contato', '');
+
+Route::group(['prefix' => 'logar'], function () {
+    Route::get('/', 'pizzaControler@home');
+    Route::get('/pizza', 'pizzaControler@home');
+    Route::get('/contato', 'pizzaControler@contato');
+});

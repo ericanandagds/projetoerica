@@ -2,12 +2,14 @@
 <head>
     <meta charset="utf-8">
     <title>:: Pizza Delivery ::</title>
-	<script src="{{asset('assets/js/jquery-2.2.4.min.js')}}" type="text/javascript"></script>	
+	<!-- JQUERY -->
+	<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>	
+	
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<script src="assets/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
-	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
- 
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">

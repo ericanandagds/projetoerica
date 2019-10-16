@@ -39,7 +39,7 @@
    width: 30%;
    height: 20%;
     
-  }*/
+  }
   </style> 
 
 <div id="login">
@@ -58,7 +58,6 @@
           <a href="cadastro.blade.php" class="btn btn-primary">Cadastrar</a>
 
   </form>
-  
 </div>
 </body>
 </html>
