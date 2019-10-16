@@ -55,7 +55,7 @@
             <input name="senha" type="password" class="form-control" id="exampleInputPassword1"  placeholder="Senha">
           </div>
           <button  type="submit" class="btn btn-primary">Entrar</button>
-          <a href="cadastro.blade.php" class="btn btn-primary">Cadastrar</a>
+          <a href={{route('cadastro')}} class="btn btn-primary">Cadastrar</a>
 
   </form>
 </div>
