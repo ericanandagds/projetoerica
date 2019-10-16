@@ -11,7 +11,7 @@ class loginController extends Controller
     }
     public function logar(Request $request){
         if ($request->email == 'teste@teste.com' && $request->senha =='123456')
-             return redirect('pizza'); 
+             return view('pizza'); 
         else 
             return redirect('login');       
        

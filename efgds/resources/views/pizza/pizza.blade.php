@@ -15,9 +15,9 @@
 <body>
   
     <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="home.html">Pagina Inicial</a>
-                <a class="navbar-brand" href="pizzas.html">Cardápio</a>
-                <a class="navbar-brand" href="contato.html">Contato</a>
+                <a class="navbar-brand" href="{{url('home')}}">Pagina Inicial</a>
+                <a class="navbar-brand" href="{{url('pizza')}}">Cardápio</a>
+                <a class="navbar-brand" href="{{url('contato')}}">Contato</a>
     </nav>
       
       <section>    

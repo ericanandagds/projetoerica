@@ -40,6 +40,7 @@
 </style>
 <section>
     <form class="contato" name="contato" method="POST" >
+      @csrf
       <h2>Contato</h2>
       <div class="form-group">    
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome" name="nome">

@@ -16,5 +16,7 @@ Route::get('/login', 'LoginController@login');
 Route::post('/logar', 'LoginController@logar');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/cadastro', 'LoginController@cadastro');
-
+$router->when(SE, 'admin', ['post'])
+Route::get('/pizza', '@pizzaController@home');
 Route::view('cadastro', 'cadastro');
+Route::view('contato', '');
