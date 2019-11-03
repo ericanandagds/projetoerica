@@ -17,9 +17,7 @@ Route::post('/logar', 'LoginController@logar');
 Route::get('/logout', 'LoginController@logout');
 Route::get('/cadastro', 'LoginController@cadastro')->name('cadastro');
 
-Route::view('cadastro', 'cadastro');
-
-Route::group(['prefix' => 'logar'], function () {
+Route::group(['prefix' => '/logar','middleware' => ['login']] , function () {
     Route::get('/', 'pizzaControler@home');
     Route::get('/pizza', 'pizzaControler@home');
     Route::get('/contato', 'pizzaControler@contato');
