@@ -55,7 +55,8 @@
             <input name="senha" type="password" class="form-control" id="exampleInputPassword1"  placeholder="Senha">
           </div>
           <button  type="submit" class="btn btn-primary">Entrar</button>
-          <a href={{route('cadastro')}} class="btn btn-primary">Cadastrar</a>
+          <p></p>
+          <li><a href="cadastro">Cadastre-se aqui! </a></li>
 
   </form>
 </div>
