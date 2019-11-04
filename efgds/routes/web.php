@@ -21,4 +21,3 @@ Route::get('/cadastro', 'LoginController@cadastro')->name('cadastro');
 Route::get('/pizza', 'loginController@home');
 Route::get('/contato', 'loginController@contato');
 
-

@@ -15,9 +15,8 @@ class Login
      */
     public function handle($request, Closure $next)
     {
-        if (!session('usuario')) {
-            return redirect()->route('login');
-        }
+        if (!session('usuario'))
+            return redirect('login');
         return $next($request);
     }
 }
