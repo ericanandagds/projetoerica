@@ -45,7 +45,7 @@
 <div id="login">
   <form action="{{url('logar')}}" method="POST" >
     @csrf
-          <div class="form-group" name="f1">
+          <div action=url class="form-group" name="f1">
             <label for="exampleInputEmail1">Email </label>
             <input type="email" name="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
             <div id="msgemail"></div>
@@ -56,7 +56,7 @@
           </div>
           <button  type="submit" class="btn btn-primary">Entrar</button>
           <p></p>
-          <li><a href="cadastro">Cadastre-se aqui! </a></li>
+          <li><a action="{{url('cadastro')}}" >Cadastre-se aqui! </a></li>
 
   </form>
 </div>

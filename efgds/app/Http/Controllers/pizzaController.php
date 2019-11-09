@@ -19,33 +19,26 @@ class pizzaController extends Controller
 
     public function salvar(Request $request) {
         $request->validate([
-            'isbn'  => 'required|integer',
-            'titulo'=> 'required',
-            'autor' => 'required',
-            'resumo'=> 'required'
+            'email'  => 'required',
+            'senha'=> 'required',
+            'endereco' => 'required',
+            'complemento'=> 'required',
+            'cidade'=> 'required',
+            'estado'=>'required',
+            'cep'=> 'required|integer' 
         ]);
+        Cadastro::create($request->all());
 
-        return redirect()->route('livros.listar')->with('acao', 'Cadastrado com sucesso');
-    }
+        return redirect()->route('cadastro')->with('acao', 'Cadastrado com sucesso');
+        }
 
     public function listar() {
-        $dados['livros'] = [
-            ['id' => 1, 'isbn' => '999999999', 'autor' => 'Autor 1', 'titulo' => 'Livro 1'],
-            ['id' => 2, 'isbn' => '888888888', 'autor' => 'Autor 2', 'titulo' => 'Livro 2']
-        ];
-        return view('livros.listar', $dados);
+        $dados['cadastro'] = Cadastro::all();
+        return view('cadastro', $dados);
     }
 
     public function editar($id) {
-        $dados = ['livro' => [
-                'id'        => 1,
-                'isbn'      => 23123123123,
-                'categoria' => 3,
-                'titulo'    => 'Titulo 1',
-                'autor'     => 'Autor 1',
-                'resumo'    => 'Bla bla bla bla bla bla'
-            ]
-        ];
+        $dados = ['cadastro'];
         
         return view('livros.edicao', $dados);
     }

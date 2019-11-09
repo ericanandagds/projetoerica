@@ -13,15 +13,16 @@
 
 </head>
 <body>
-  
+
     <nav class="navbar navbar-light bg-light">
                 <a class="navbar-brand" href="{{url('home')}}">Pagina Inicial</a>
-                <a class="navbar-brand" href="{{url('pizza')}}">Cardápio</a>
+                <a class="navbar-brand" href="pizza">Cardápio</a>
                 <a class="navbar-brand" href="{{url('contato')}}">Contato</a>
     </nav>
       
-      <section>    
-        <div class="container">
+      <section>  
+          <li class="@yield('cadastro')"><a href="{{route('cadastro')}}">Listar</a></li>  
+    <!-- <div class="container">
           <div class="row">
             <div class="col-sm">
               
@@ -100,7 +101,7 @@
           </div>
         </div>
       </section>
-    <p></p> 
+    <p></p> -->
     <footer>
       
       <p>By: Erica Fernanda</p>

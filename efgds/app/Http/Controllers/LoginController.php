@@ -19,5 +19,5 @@ class loginController extends Controller
     public function logout(){
         return redirect('login');
     }
- 
+  
 }
