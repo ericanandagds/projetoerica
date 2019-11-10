@@ -11,7 +11,7 @@
 <body>
     <style type="text/css">
       body {
-        background-image: url('{{asset('assets/img/pizza-background.jpg')}}');
+        background-image: url(assets/img/pizza-background.jpg);
              
       }
   
@@ -22,7 +22,7 @@
     <a class="navbar-brand" href="contato.html">Contato</a>
 </nav>
 <section>  
-<form action="home.html" method="POST" class="cadastro">
+<form action="home.html" method="post" class="cadastro">
 <h2>Cadastro</h2>
   <div class="form-row" name="cadastro">
     <div class="form-group col-md-6">

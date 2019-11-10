@@ -12,10 +12,10 @@
 */
 
 Route::get('/', 'LoginController@login');
-Route::get('/login', 'LoginController@login');
-Route::post('/logar', 'LoginController@logar');
-Route::get('/logout', 'LoginController@logout');
-Route::get('/cadastro', 'LoginController@cadastro')->name('cadastro');
+Route::get('/login', 'LoginController@login')->name('login');
+Route::post('/logar', 'LoginController@logar')-> name ('logar');
+Route::post('/logout', 'LoginController@logout')->name('logout');
+Route::post('/cadastro', 'LoginController@cadastro')->name('cadastro');
 
 
 Route::get('/pizza', 'loginController@home');
