@@ -14,60 +14,52 @@ class pizzaController extends Controller
     }
  
     public function novo() {
-        return view('livros.cadastro');
+        return view('pizza');
     }
 
     public function salvar(Request $request) {
         $request->validate([
-            'email'  => 'required',
-            'senha'=> 'required',
-            'endereco' => 'required',
-            'complemento'=> 'required',
-            'cidade'=> 'required',
-            'estado'=>'required',
-            'cep'=> 'required|integer' 
+            'nome'  => 'required',
+            'tamanho'=> 'required',
+            'sabor' => 'required',
+            'pagamento'=> 'required',
+             
         ]);
-        Cadastro::create($request->all());
+        Pedidos::create($request->all());
 
-        return redirect()->route('cadastro')->with('acao', 'Cadastrado com sucesso');
+        return redirect()->route('pizza')->with('acao', 'Cadastrado com sucesso');
         }
 
     public function listar() {
-        $dados['cadastro'] = Cadastro::all();
-        return view('cadastro', $dados);
+        $dados['pedidos'] = Pedidos::all();
+        return view('pizza', $dados);
     }
 
     public function editar($id) {
-        $dados = ['cadastro'];
+        $dados = ['pedidos'];
         
-        return view('livros.edicao', $dados);
+        return view('pizza', $dados);
     }
     
     public function atualizar(Request $request) {
         $request->validate([
-            'isbn'  => 'required|integer',
-            'titulo'=> 'required',
-            'autor' => 'required',
-            'resumo'=> 'required'
+            'nome'  => 'required',
+            'tamanho'=> 'required',
+            'sabor' => 'required',
+            'pagamento'=> 'required',
         ]);
 
-        return redirect()->route('livros.listar')->with('acao', 'Atualizado com sucesso');
+        return redirect()->route('pizza')->with('acao', 'Atualizado com sucesso');
     }
 
     public function visualizar($id) {
-        $dados = ['livro' => [
-                    'id'        => 1,
-                    'titulo'    => 'Titulo 1',
-                    'autor'     => 'Autor 1',
-                    'resumo'    => 'Bla bla bla bla bla bla'
-                ]
-        ];
-        return view('livros.visualizar', $dados);
+        $dados =['pedidos'];        
+         return view('livros.visualizar', $dados);
     }
 
     public function excluir($id) {
      
-        return redirect()->route('livros.listar')->with('acao', 'Excluído com sucesso');
+        return redirect()->route('pizza')->with('acao', 'Excluído com sucesso');
     }
 }
 
