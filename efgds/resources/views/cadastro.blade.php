@@ -22,8 +22,9 @@
     <a class="navbar-brand" href="contato.html">Contato</a>
 </nav>
 <section>  
-<form action="home.html" method="post" class="cadastro">
-<h2>Cadastro</h2>
+<form action=url method="post" class="cadastro">
+   @csrf
+  <h2>Cadastro</h2>
   <div class="form-row" name="cadastro">
     <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
@@ -89,28 +90,7 @@
         </div>
         <button  type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
-    <script language="Javascript">
-      function validacaoEmail(field) {
-      usuario = field.value.substring(0, field.value.indexOf("@"));
-      dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
-      if ((usuario.length >=1) &&
-          (dominio.length >=3) && 
-          (usuario.search("@")==-1) && 
-          (dominio.search("@")==-1) &&
-          (usuario.search(" ")==-1) && 
-          (dominio.search(" ")==-1) &&
-          (dominio.search(".")!=-1) &&      
-          (dominio.indexOf(".") >=1)&& 
-          (dominio.lastIndexOf(".") < dominio.length - 1)) {
-      document.getElementById("msgemail").innerHTML="E-mail válido";
-      alert("email valido");
-      }
-      else{
-      document.getElementById("msgemail").innerHTML="<font color='red'>Email inválido </font>";
-      alert("E-mail invalido");
-      }
-      }
-      </script>
+    
     
 
 </form>
