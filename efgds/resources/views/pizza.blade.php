@@ -23,8 +23,8 @@
                 <a class="navbar-brand" href="pizza">Cardápio</a>
                 <a class="navbar-brand" href="{{url('contato')}}">Contato</a>
     </nav>
-    <form action="{{ url('pizza') }}">
-    @csrf
+    <form action="{{ route('pizza.salvar') }}" method="post">
+        @csrf
         <h2>Cadastro</h2>
         <div class="form-group col-md-2">
                 <label for="inputZip">Nome </label>

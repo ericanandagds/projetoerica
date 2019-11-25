@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pedidos;
 
 class pizzaController extends Controller
 {
@@ -18,6 +19,8 @@ class pizzaController extends Controller
     }
 
     public function salvar(Request $request) {
+     
+
         $request->validate([
             'nome'  => 'required',
             'tamanho'=> 'required',
@@ -26,19 +29,18 @@ class pizzaController extends Controller
              
         ]);
         Pedidos::create($request->all());
-
-        return redirect()->route('pizza')->with('acao', 'Cadastrado com sucesso');
+             return redirect()->action('pizzaController@salvar')->with('acao', 'Cadastrado com sucesso');
         }
 
     public function listar() {
         $dados['pedidos'] = Pedidos::all();
-        return view('pizza', $dados);
+            return view('pizza', $dados);
     }
 
     public function editar($id) {
         $dados = ['pedidos'];
         
-        return view('pizza', $dados);
+            return view('pizza', $dados);
     }
     
     public function atualizar(Request $request) {
@@ -49,12 +51,12 @@ class pizzaController extends Controller
             'pagamento'=> 'required',
         ]);
 
-        return redirect()->route('pizza')->with('acao', 'Atualizado com sucesso');
+            return redirect()->route('pizza')->with('acao', 'Atualizado com sucesso');
     }
 
     public function visualizar($id) {
         $dados =['pedidos'];        
-         return view('livros.visualizar', $dados);
+             return view('pizza', $dados);
     }
 
     public function excluir($id) {
@@ -62,7 +64,3 @@ class pizzaController extends Controller
         return redirect()->route('pizza')->with('acao', 'Excluído com sucesso');
     }
 }
-
-       
-    
-

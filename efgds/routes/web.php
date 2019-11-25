@@ -18,7 +18,7 @@ Route::post('/logout', 'LoginController@logout');
 Route::post('/cadastro', 'LoginController@cadastro')->name('cadastro');
 
 
-Route::get('/pizza', 'pizzaController@home');
+Route::get('/pizza', 'pizzaController@home')->name('pizza');
+Route::post('/salvar', 'pizzaController@salvar')->name('pizza.salvar');
 Route::get('/contato', 'pizzaController@contato');
 
-// Route::get('/pizza', 'pizzaController@salvar');
